@@ -1,0 +1,51 @@
+# GNU Screen - main configuration file
+# All other .screenrc files will source this file to inherit settings.
+
+# Tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' # 開啟 256 色模式
+# Enables use of shift-PgUp and shift-PgDn
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+ 
+# Erase background with current bg color
+defbce "on"
+# Enable 256 color term
+term xterm-256color
+# Cache 30000 lines for scroll back
+defscrollback 30000
+# New mail notification
+#backtick 101 30 15 $HOME/bin/mailstatus.sh
+# 設定預設的文字編碼
+defencoding utf8
+# 關閉啟動訊息
+startup_message off
+# 用 detach 取代 關閉 terminal
+autodetach on
+# 關閉 visual bell
+vbell off
+# screen 通知訊息等待時間
+msgwait 0.5
+# Enable alternate screen switching
+altscreen
+
+# 設定總是顯示 screen 的狀態列
+#hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+hardstatus alwayslastline '%{= Kd} %{= KD}%-w%{= Gk}%n %t%{= Kd}%+w %-= %{KG} %l%{KW}|%{= KG}%Y-%m-%d%{= Kc}%C%A%{-} '
+#hardstatus alwayslastline '%-w%{= BW}%50>%n %t%{-}%+w%<'
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+## 設定每個視窗的標題
+#caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+
+## Key Binding
+# change command character from ctrl-a to ctrl-b (emacs users may want this)
+#escape ^Bb
+# Hide hardstatus: ctrl-a f
+bind f eval "hardstatus ignore"
+# Show hardstatus: ctrl-a F
+bind F eval "hardstatus alwayslastline"
+# 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind b encoding big5 utf8 # convert big5 to utf8
+# C-a u 後切回可以直看 utf-8 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind u encoding utf8 utf8
+
+bindkey [1;3D prev
+bindkey [1;3C next
