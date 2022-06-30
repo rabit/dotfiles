@@ -1,7 +1,8 @@
 # [wezterm - Wez's Terminal Emulator](https://wezfurlong.org/wezterm/index.html)
 ## 安裝
-1. 拷貝 wezterm.lua 到 wezterm 安裝目錄
-2. 在每個ssh-domain, 或 wsl-domain 的環境下，拷貝 weztern.sh 到 $HOME/.local/bin
+1. 請先安裝zsh，wezterm.lua 會嘗試切換至zsh，未安裝zsh會導致wezterm直接結束
+2. 拷貝 wezterm.lua 到 wezterm 安裝目錄
+3. 在每個ssh-domain, 或 wsl-domain 的環境下，拷貝 weztern.sh 到 $HOME/.local/bin
 
 ## 設定
 1. [Show your wezterms · Discussion #628 · wez/wezterm](https://github.com/wez/wezterm/discussions/628)
