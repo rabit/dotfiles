@@ -16,4 +16,4 @@
 1. [wezterm/assets/colors at main · wez/wezterm](https://github.com/wez/wezterm/tree/main/assets/colors)
 
 ## 參考
-1. 
+1. [How to change hostname on Ubuntu running on Windows WSL? - SrcCodes](https://www.srccodes.com/change-hostname-ubuntu-microsoft-windows-subsystem-for-linux-wsl-wsl2-wsl-conf-unable-resolve-hosts-name-service-not-known-list-running-shutdown-vm-srccodes/)
