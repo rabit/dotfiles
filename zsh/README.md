@@ -6,7 +6,7 @@ $ wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.z
 $ echo "zmodule romkatv/powerlevel10k" >> $HOME/.zimrc
 $ zimfw install
 $ p10k configure
-$ git clone https://github.com/rabit/dotfiles.git $HOME/projects
+$ git clone https://github.com/rabit/dotfiles.git $HOME/projects/dotfiles
 $ ln -sfn $HOME/projects/dotfiles/zsh/zshenv $HOME/.zshenv
 ```
 ### 參考
