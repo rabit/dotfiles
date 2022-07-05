@@ -5,3 +5,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias vim='nvim'
 source $HOME/.local/bin/wezterm.sh
 export PATH=$HOME/.local/bin:$PATH
+export HOSTNAME=$HOST
