@@ -1,6 +1,13 @@
 # tmux 
 
 ## 安裝
+```bash
+$ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+$ git clone https://github.com/rabit/dotfiles.git $HOME/projects/dotfiles
+$ ln -sf $HOME/projects/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+# type this in terminal if tmux is already running
+$ tmux source ~/.tmux.conf
+```
 
 ## Plugins
 ### 套件管理工具
