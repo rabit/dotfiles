@@ -4,5 +4,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Custom
 alias vim='nvim'
 source $HOME/.local/bin/wezterm.sh
+source /etc/zsh_command_not_found
 export PATH=$HOME/.local/bin:$PATH
 export HOSTNAME=$HOST
+export skip_global_compinit=1
