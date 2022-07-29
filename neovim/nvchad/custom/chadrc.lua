@@ -6,14 +6,10 @@ local pluginConfs = require "custom.plugins.configs"
 local userPlugins = require "custom.plugins" -- path to table
 
 M.plugins = {
-   options = {
-      lspconfig = {
-         setup_lspconf = "custom.plugins.lspconfig",
-      },
-   },
    override = {
       ["nvim-treesitter/nvim-treesitter"] = pluginConfs.treesitter,
       ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree,
+      ["williamboman/mason.nvim"] = pluginConfs.mason,
    },
    remove = {
       "lukas-reineke/indent-blankline.nvim",
@@ -26,12 +22,6 @@ M.plugins = {
 M.ui = {
    italic_comments = false,
    theme = "onedark",
-}
-
-M.options = {
-   user = function ()
-      require("custom.options")
-   end,
 }
 
 M.mappings = require "custom.mappings"

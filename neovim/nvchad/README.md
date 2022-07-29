@@ -6,6 +6,7 @@ $ sudo apt install neovim ripgrep build-essential
 $ git clone https://github.com/NvChad/NvChad $HOME/.config/nvim --depth 1 ; nvim
 $ git clone https://github.com/rabit/dotfiles.git $HOME/projects/dotfiles
 $ ln -sf $HOME/projects/dotfiles/neovim/nvchad/custom $HOME/.config/nvim/lua/custom
+$ nvim --headless +PackerCompile +PackerInstall +qa
 ```
 
 ### 移除

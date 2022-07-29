@@ -1,6 +1,12 @@
 -- /lua/custom/plugins/init.lua
 return {
-  ["ellisonleao/glow.nvim"] = { cmd = "Glow" },
+  ["neovim/nvim-lspconfig"] = {
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
+    end,
+  },
+  ["ellisonleao/glow.nvim"] = { branch = 'main' },
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
